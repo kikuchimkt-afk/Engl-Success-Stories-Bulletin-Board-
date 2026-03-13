@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>英検合格体験記 一覧 | ECCジュニア・ベストワン — 管理ページ</title>
+  <meta name="description" content="ECCジュニア・ベストワン 英検合格体験記の投稿を一覧表示・管理するページです。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sakura-container" id="sakuraContainer"></div>
+
+  <header class="page-header fade-in">
+    <div class="page-header__badge">📋 ECCジュニア・ベストワン 管理ページ</div>
+    <h1 class="page-header__title">英検合格体験記 一覧</h1>
+    <p class="page-header__subtitle">生徒たちの英検合格ストーリー</p>
+  </header>
+
+  <main class="main-container main-container--wide">
+    <section class="director-message glass-card fade-in">
+      <div class="director-message__inner">
+        <div class="director-message__content">
+          <div class="director-message__label">📖 教室からのメッセージ</div>
+          <div class="director-message__text">
+            <p>英検合格、本当におめでとうございます。</p>
+            <p>単語を何度も繰り返し覚え、リスニングの練習を重ね、ライティングに挑戦してきた日々——その全てが、今回の合格という形で実を結びました。</p>
+            <p>英検の合格は、英語力だけでなく「努力を続ける力」を証明するものです。</p>
+            <p><strong>あなたの頑張りを、心から誇りに思います。おめでとう！</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="admin-stats fade-in" id="statsSection">
+      <div class="stat-card">
+        <div class="stat-card__value" id="totalCount">0</div>
+        <div class="stat-card__label">総投稿数</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__value" id="upperCount">0</div>
+        <div class="stat-card__label">準2級以上</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__value" id="lowerCount">0</div>
+        <div class="stat-card__label">3級以下</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__value" id="avgRating">-</div>
+        <div class="stat-card__label">平均おすすめ度</div>
+      </div>
+    </div>
+
+    <div class="glass-card fade-in" style="padding: 20px 24px; margin-bottom: 24px;">
+      <div class="admin-toolbar">
+        <button class="filter-btn active" data-filter="all">すべて</button>
+        <button class="filter-btn" data-filter="1級">1級</button>
+        <button class="filter-btn" data-filter="準1級">準1級</button>
+        <button class="filter-btn" data-filter="2級">2級</button>
+        <button class="filter-btn" data-filter="準2級">準2級</button>
+        <button class="filter-btn" data-filter="3級">3級</button>
+        <button class="filter-btn" data-filter="4級">4級</button>
+        <button class="filter-btn" data-filter="5級">5級</button>
+        <select class="form-select" id="yearFilter" style="width: auto; padding: 8px 36px 8px 14px; font-size: 0.85rem; border-radius: 100px;">
+          <option value="all">全年度</option>
+          <option value="2026">2026年</option>
+          <option value="2025">2025年</option>
+          <option value="2024">2024年</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="stories-grid" id="storiesGrid"></div>
+
+    <div class="empty-state" id="emptyState" style="display: none;">
+      <div class="empty-state__icon">📖</div>
+      <p class="empty-state__text">まだ投稿がありません。<br>生徒たちの英検合格体験記を待ちましょう！</p>
+    </div>
+  </main>
+
+  <div class="confirm-overlay" id="confirmOverlay">
+    <div class="confirm-box">
+      <p class="confirm-box__text">この投稿を削除しますか？<br>この操作は元に戻せません。</p>
+      <div class="confirm-box__actions">
+        <button class="btn-confirm-cancel" id="confirmCancel">キャンセル</button>
+        <button class="btn-confirm-ok" id="confirmOk">削除する</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="page-footer"><p>© 2026 ECCジュニア・ベストワン</p></footer>
+  <script src="admin.js"></script>
+</body>
+</html>

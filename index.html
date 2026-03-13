@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>英検合格体験記を投稿する | ECCジュニア・ベストワン</title>
+  <meta name="description" content="ECCジュニア・ベストワンの英検合格体験談を投稿して、後輩たちに勇気を届けよう！英検合格のストーリーをお待ちしています。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- パーティクルアニメーション -->
+  <div class="sakura-container" id="sakuraContainer"></div>
+
+  <!-- ヘッダー -->
+  <header class="page-header fade-in">
+    <div class="page-header__badge">📖 ECCジュニア・ベストワン 英検合格者の声</div>
+    <h1 class="page-header__title">英検合格おめでとう！🎊<br>体験記投稿フォーム</h1>
+    <p class="page-header__subtitle">あなたの合格ストーリーを後輩たちに届けよう</p>
+  </header>
+
+  <!-- メインフォーム -->
+  <main class="main-container">
+
+    <!-- 教室長からのメッセージ -->
+    <section class="director-message glass-card fade-in">
+      <div class="director-message__inner">
+        <div class="director-message__content">
+          <div class="director-message__label">📖 教室からのメッセージ</div>
+          <div class="director-message__text">
+            <p>英検合格、本当におめでとうございます。</p>
+            <p>単語を何度も繰り返し覚え、リスニングの練習を重ね、ライティングに挑戦してきた日々——その全てが、今回の合格という形で実を結びました。</p>
+            <p>英検の合格は、英語力だけでなく「努力を続ける力」を証明するものです。</p>
+            <p>これからもその力を大切にして、さらに上の級、そしてその先の目標に向かって、一歩ずつ進んでいってください。</p>
+            <p><strong>あなたの頑張りを、心から誇りに思います。</strong></p>
+            <p><strong>おめでとう！</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <form id="storyForm" class="glass-card fade-in" novalidate>
+
+      <!-- 基本情報 -->
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="initials">
+            <span class="form-label__icon">✏️</span>
+            イニシャル
+            <span class="form-label__required">必須</span>
+          </label>
+          <input type="text" class="form-input" id="initials" placeholder="例：T.K." maxlength="10" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="grade">
+            <span class="form-label__icon">🏅</span>
+            合格した級
+            <span class="form-label__required">必須</span>
+          </label>
+          <select class="form-select" id="grade" required>
+            <option value="" disabled selected>選択してください</option>
+            <option value="1級">1級</option>
+            <option value="準1級">準1級</option>
+            <option value="2級">2級</option>
+            <option value="準2級">準2級</option>
+            <option value="3級">3級</option>
+            <option value="4級">4級</option>
+            <option value="5級">5級</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="year">
+            <span class="form-label__icon">📅</span>
+            受験年
+            <span class="form-label__required">必須</span>
+          </label>
+          <select class="form-select" id="year" required>
+            <option value="" disabled selected>選択してください</option>
+            <option value="2026">2026年</option>
+            <option value="2025">2025年</option>
+            <option value="2024">2024年</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="session">
+            <span class="form-label__icon">🗓️</span>
+            受験回
+            <span class="form-label__required">必須</span>
+          </label>
+          <select class="form-select" id="session" required>
+            <option value="" disabled selected>選択してください</option>
+            <option value="第1回">第1回</option>
+            <option value="第2回">第2回</option>
+            <option value="第3回">第3回</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="school">
+            <span class="form-label__icon">🏫</span>
+            学校名
+            <span class="form-label__required">必須</span>
+          </label>
+          <input type="text" class="form-input" id="school" placeholder="例：〇〇中学校" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="schoolYear">
+            <span class="form-label__icon">🎒</span>
+            学年
+            <span class="form-label__required">必須</span>
+          </label>
+          <select class="form-select" id="schoolYear" required>
+            <option value="" disabled selected>選択してください</option>
+            <option value="小1">小1</option>
+            <option value="小2">小2</option>
+            <option value="小3">小3</option>
+            <option value="小4">小4</option>
+            <option value="小5">小5</option>
+            <option value="小6">小6</option>
+            <option value="中1">中1</option>
+            <option value="中2">中2</option>
+            <option value="中3">中3</option>
+            <option value="高1">高1</option>
+            <option value="高2">高2</option>
+            <option value="高3">高3</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- 体験記セクション -->
+      <div class="section-divider">
+        <span class="section-divider__line"></span>
+        <span class="section-divider__icon">📝</span>
+        <span class="section-divider__line"></span>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="struggle">
+          <span class="form-label__icon">😣</span>
+          英検の勉強で苦労したこと
+          <span class="form-label__required">必須</span>
+        </label>
+        <textarea class="form-textarea" id="struggle" placeholder="例：単語がなかなか覚えられなくて、リスニングも聞き取れず、どう勉強すればいいか分かりませんでした..." required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="growth">
+          <span class="form-label__icon">🌱</span>
+          ここに通ってできるようになったこと
+          <span class="form-label__required">必須</span>
+        </label>
+        <textarea class="form-textarea" id="growth" placeholder="例：先生に単語の覚え方やリスニングのコツを教えてもらい、毎日少しずつ力がつきました。ライティングも添削してもらえて自信がつきました！" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="message">
+          <span class="form-label__icon">💌</span>
+          講師／教室へ一言
+          <span class="form-label__required">必須</span>
+        </label>
+        <textarea class="form-textarea" id="message" placeholder="例：いつも丁寧に教えてくださりありがとうございました！分からないところを何度質問しても優しく解説してくださって、本当に心強かったです。" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="summary">
+          <span class="form-label__icon">🌟</span>
+          まとめの感想
+          <span class="form-label__optional">任意</span>
+        </label>
+        <textarea class="form-textarea" id="summary" placeholder="英検を受けてみての感想や、これから受験する人へのアドバイスなどを自由にお書きください。"></textarea>
+      </div>
+
+      <!-- おすすめ度 -->
+      <div class="section-divider">
+        <span class="section-divider__line"></span>
+        <span class="section-divider__icon">⭐</span>
+        <span class="section-divider__line"></span>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">
+          <span class="form-label__icon">⭐</span>
+          ECCジュニア・ベストワンのおすすめ度
+          <span class="form-label__required">必須</span>
+        </label>
+        <div class="star-rating" id="starRating">
+          <input type="radio" name="rating" id="star5" value="5"><label for="star5" title="5 - 最高！"></label>
+          <input type="radio" name="rating" id="star4" value="4"><label for="star4" title="4 - とても良い"></label>
+          <input type="radio" name="rating" id="star3" value="3"><label for="star3" title="3 - 良い"></label>
+          <input type="radio" name="rating" id="star2" value="2"><label for="star2" title="2 - まあまあ"></label>
+          <input type="radio" name="rating" id="star1" value="1"><label for="star1" title="1 - 普通"></label>
+        </div>
+      </div>
+
+      <!-- 保護者メッセージ -->
+      <div class="section-divider">
+        <span class="section-divider__line"></span>
+        <span class="section-divider__icon">👨‍👩‍👧</span>
+        <span class="section-divider__line"></span>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="parentMessage">
+          <span class="form-label__icon">💐</span>
+          保護者からのメッセージ
+          <span class="form-label__optional">任意</span>
+        </label>
+        <textarea class="form-textarea" id="parentMessage" placeholder="例：英検に向けてコツコツ頑張っていた姿を見ていたので、合格の知らせを聞いたときは本当にうれしかったです。先生方のご指導に感謝しています。"></textarea>
+      </div>
+
+      <!-- SNS利用同意 -->
+      <div class="consent-notice">
+        <label class="consent-label">
+          <input type="checkbox" id="consentCheck" required>
+          <span>投稿いただいた内容は、個人が特定されないよう配慮した上で、ECCジュニア・ベストワンのSNS、ウェブサイト、チラシ等の広告媒体に掲載させていただく場合があります。同意の上、投稿してください。</span>
+        </label>
+      </div>
+
+      <!-- 送信ボタン -->
+      <button type="submit" class="btn-submit" id="submitBtn">
+        <span>🎊</span>
+        <span>投稿する</span>
+      </button>
+
+    </form>
+  </main>
+
+  <!-- 投稿完了モーダル -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal-content">
+      <div class="modal-content__emoji">🎉</div>
+      <h2 class="modal-content__title">投稿ありがとうございます！</h2>
+      <p class="modal-content__text">
+        あなたの英検合格体験記が送信されました。<br>
+        後輩たちの大きな励みになります！<br>
+        改めて、合格おめでとうございます！🎊
+      </p>
+      <button class="btn-modal-close" id="modalCloseBtn">
+        <span>✨</span>
+        <span>閉じる</span>
+      </button>
+    </div>
+  </div>
+
+  <footer class="page-footer">
+    <p>© 2026 ECCジュニア・ベストワン</p>
+  </footer>
+
+  <script src="submit.js"></script>
+</body>
+</html>
