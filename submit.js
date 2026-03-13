@@ -43,6 +43,36 @@ function initForm() {
       modal.classList.remove('active');
     }
   });
+
+  // 「その他」選択時のテキストエリア表示切替
+  setupConditionalTextarea('struggle', 'struggleOther');
+  setupConditionalTextarea('growth', 'growthOther');
+}
+
+/* --- プルダウン「その他」連動テキストエリア --- */
+function setupConditionalTextarea(selectId, textareaId) {
+  const select = document.getElementById(selectId);
+  const textarea = document.getElementById(textareaId);
+  select.addEventListener('change', () => {
+    if (select.value === 'other') {
+      textarea.style.display = 'block';
+      textarea.required = true;
+      textarea.focus();
+    } else {
+      textarea.style.display = 'none';
+      textarea.required = false;
+      textarea.value = '';
+    }
+  });
+}
+
+/* --- プルダウンの値を取得（その他の場合は自由記述の値） --- */
+function getSelectValue(selectId, textareaId) {
+  const select = document.getElementById(selectId);
+  if (select.value === 'other') {
+    return document.getElementById(textareaId).value.trim();
+  }
+  return select.value;
 }
 
 /* --- フォーム送信処理 --- */
@@ -59,8 +89,8 @@ async function handleSubmit(e) {
     session: document.getElementById('session').value,
     school: document.getElementById('school').value.trim(),
     schoolYear: document.getElementById('schoolYear').value,
-    struggle: document.getElementById('struggle').value.trim(),
-    growth: document.getElementById('growth').value.trim(),
+    struggle: getSelectValue('struggle', 'struggleOther'),
+    growth: getSelectValue('growth', 'growthOther'),
     message: document.getElementById('message').value.trim(),
     summary: document.getElementById('summary').value.trim(),
   };

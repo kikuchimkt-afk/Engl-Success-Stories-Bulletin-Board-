@@ -74,14 +74,15 @@
         <div class="form-group">
           <label class="form-label" for="year">
             <span class="form-label__icon">📅</span>
-            受験年
+            受験年度
             <span class="form-label__required">必須</span>
           </label>
           <select class="form-select" id="year" required>
             <option value="" disabled selected>選択してください</option>
-            <option value="2026">2026年</option>
-            <option value="2025">2025年</option>
-            <option value="2024">2024年</option>
+            <option value="2028">2028年度</option>
+            <option value="2027">2027年度</option>
+            <option value="2026">2026年度</option>
+            <option value="2025">2025年度</option>
           </select>
         </div>
         <div class="form-group">
@@ -145,7 +146,16 @@
           英検の勉強で苦労したこと
           <span class="form-label__required">必須</span>
         </label>
-        <textarea class="form-textarea" id="struggle" placeholder="例：単語がなかなか覚えられなくて、リスニングも聞き取れず、どう勉強すればいいか分かりませんでした..." required></textarea>
+        <select class="form-select" id="struggle" required>
+          <option value="" disabled selected>選択してください</option>
+          <option value="単語がなかなか覚えられなかった">単語がなかなか覚えられなかった</option>
+          <option value="リスニングが早くて聞き取れなかった">リスニングが早くて聞き取れなかった</option>
+          <option value="長文読解に苦手意識があった">長文読解に苦手意識があった</option>
+          <option value="面接(スピーキング)で何を話せばいいかわからなかった">面接(スピーキング)で何を話せばいいかわからなかった</option>
+          <option value="勉強の仕方がわからなかった">勉強の仕方がわからなかった</option>
+          <option value="other">その他（自由記述）</option>
+        </select>
+        <textarea class="form-textarea form-textarea--conditional" id="struggleOther" placeholder="具体的な内容をお書きください" style="display:none;"></textarea>
       </div>
 
       <div class="form-group">
@@ -154,7 +164,16 @@
           ここに通ってできるようになったこと
           <span class="form-label__required">必須</span>
         </label>
-        <textarea class="form-textarea" id="growth" placeholder="例：先生に単語の覚え方やリスニングのコツを教えてもらい、毎日少しずつ力がつきました。ライティングも添削してもらえて自信がつきました！" required></textarea>
+        <select class="form-select" id="growth" required>
+          <option value="" disabled selected>選択してください</option>
+          <option value="単語や熟語を覚えるコツが身につき、定着率がアップした">単語や熟語を覚えるコツが身につき、定着率がアップした</option>
+          <option value="リスニングの音がクリアに聞き取れるようになった">リスニングの音がクリアに聞き取れるようになった</option>
+          <option value="英文を素早く正確に読み取れるようになった">英文を素早く正確に読み取れるようになった</option>
+          <option value="英語で自分の考えを話せるようになった">英語で自分の考えを話せるようになった</option>
+          <option value="「合格までの道すじ」を明確にして学習できるようになった">「合格までの道すじ」を明確にして学習できるようになった</option>
+          <option value="other">その他（自由記述）</option>
+        </select>
+        <textarea class="form-textarea form-textarea--conditional" id="growthOther" placeholder="具体的な内容をお書きください" style="display:none;"></textarea>
       </div>
 
       <div class="form-group">

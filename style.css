@@ -362,6 +362,23 @@ body {
   line-height: 1.8;
 }
 
+.form-textarea--conditional {
+  margin-top: 10px;
+  min-height: 90px;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .form-select {
   appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236C757D' d='M6 8.825L0.375 3.2l.85-.85L6 7.125l4.775-4.775.85.85z'/%3E%3C/svg%3E");
